@@ -12,17 +12,17 @@ public Plugin:myinfo =
 
 public OnPluginStart()
 {
-	RegConsoleCmd("listdeaths", Command_ListDeaths)
+	RegConsoleCmd("listdeaths", Command_ListDeaths);
 }
  
 public Action:Command_ListDeaths(client, args)
 {
     if(IsClientInGame(client)){
         PrintToChat(client, "[SM] listdeaths blocked; stop that jerkface!");
-        return Plugin_Handled
+        return Plugin_Handled;
     }
 
-    return Plugin_Continue
+    return Plugin_Continue;
 
 }
 
