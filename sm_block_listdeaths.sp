@@ -3,7 +3,7 @@
 
 public Plugin:myinfo =
 {
-    name = "block_listdeaths",
+    name = "sm_block_listdeaths",
     author = "Billehs",
     description = "Blocks the `listdeaths` command; prevents a server exploit",
     version = "1.0.0.0",
