@@ -7,7 +7,7 @@ public Plugin:myinfo =
     author = "Billehs",
     description = "Blocks the `listdeaths` command; prevents a server exploit",
     version = "1.0.0.0",
-    url = "http://www.sourcemod.net/"
+    url = "https://github.com/CrimsonTautology/sm_blocklistdeaths"
 };
 
 public OnPluginStart()
@@ -18,7 +18,10 @@ public OnPluginStart()
 public Action:Command_ListDeaths(client, args)
 {
     if(IsClientInGame(client)){
+        new String:clientName[200];
+        GetClientName(client, clientName, sizeof(clientName));
         PrintToChat(client, "[SM] listdeaths blocked; stop that jerkface!");
+        PrintToChatAll("[SM] %s is a jerk face and is trying to crash the server", clientName);
         return Plugin_Handled;
     }
 
